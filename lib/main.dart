@@ -38,12 +38,9 @@ class _DicePageState extends State<DicePage> {
       child: Row(
         children: <Widget>[
           Expanded(
-//            flex: 1, // flex is ratio
             child: FlatButton(
               onPressed: () {
-                setState(() {
-                  randomNumber();
-                });
+                randomNumber();
               },
               child: Image.asset('images/dice$leftDiceNumber.png'),
             ),
@@ -53,7 +50,7 @@ class _DicePageState extends State<DicePage> {
               onPressed: () {
                 randomNumber();
               },
-              child: Image.asset('images/dice${rightDiceNumber}.png'),
+              child: Image.asset('images/dice$rightDiceNumber.png'),
             ),
           ),
         ],
