@@ -16,8 +16,12 @@ void main() {
 }
 
 class DicePage extends StatelessWidget {
+//  var lefButtonNumber = 5; // stateless not support mutable
   @override
   Widget build(BuildContext context) {
+    // everything in the parentheses will reload so everything outside from this will not reload
+    // wo we will place variable in here
+    var leftDiceNumber = 5;
     return Center(
       child: Row(
         children: <Widget>[
@@ -27,7 +31,7 @@ class DicePage extends StatelessWidget {
               onPressed: () {
                 print('Left Button got pressed!');
               },
-              child: Image.asset('images/dice1.png'),
+              child: Image.asset('images/dice$leftDiceNumber.png'),
             ),
           ),
           Expanded(
